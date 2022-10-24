@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PnX-DT-xRt">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Volja.otf">
+            <string>Volja-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DBg-cd-BwZ">
+            <objects>
+                <navigationController id="PnX-DT-xRt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GrD-Rw-jPB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UdK-lj-GfQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08Q-Qm-4GF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-617" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Calcifer_chasing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHW-BS-ses" customClass="GradientView" customModule="Calcifer_chasing">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.12941176470588234" green="0.001057927539382224" blue="0.0084368639508453549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hhh-uf-IL9">
+                                <rect key="frame" x="0.0" y="652" width="414" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyc-1e-M9O">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start">
+                                            <fontDescription key="titleFontDescription" name="Lutsk-sity" family="Lutsk-sity" pointSize="30"/>
+                                            <color key="baseForegroundColor" red="1" green="0.3187103295317103" blue="0.060370477975350889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6DK-rb-3WN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ7-yL-kic">
+                                        <rect key="frame" x="0.0" y="70" width="414" height="70"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Score history">
+                                            <fontDescription key="titleFontDescription" name="Lutsk-sity" family="Lutsk-sity" pointSize="30"/>
+                                            <color key="baseForegroundColor" red="1" green="0.3187103295317103" blue="0.060370477975350889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ScoreButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sm0-El-AJJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-SK-wvH">
+                                        <rect key="frame" x="0.0" y="140" width="414" height="70"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Titles">
+                                            <fontDescription key="titleFontDescription" name="Lutsk-sity" family="Lutsk-sity" pointSize="30"/>
+                                            <color key="baseForegroundColor" red="1" green="0.3187103295317103" blue="0.060370477975350889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="TitlesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlp-WG-8M8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gQ7-yL-kic" firstAttribute="height" secondItem="GJR-SK-wvH" secondAttribute="height" id="bYB-zx-cV3"/>
+                                    <constraint firstItem="wyc-1e-M9O" firstAttribute="height" secondItem="gQ7-yL-kic" secondAttribute="height" id="f1p-SI-SeJ"/>
+                                    <constraint firstItem="GJR-SK-wvH" firstAttribute="height" secondItem="wyc-1e-M9O" secondAttribute="height" id="l0Z-yw-h6W"/>
+                                    <constraint firstAttribute="height" constant="210" id="tv7-n9-RqY"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calcifer chasing " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd4-ho-BR8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="35"/>
+                                <fontDescription key="fontDescription" name="Volja-Regular" family="Volja" pointSize="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.048178181049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hhh-uf-IL9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MYb-vZ-P9Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hhh-uf-IL9" secondAttribute="bottom" id="ONW-Id-QAC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hhh-uf-IL9" secondAttribute="trailing" id="ObO-fO-CX5"/>
+                            <constraint firstItem="FHW-BS-ses" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UId-Dp-fUX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zd4-ho-BR8" secondAttribute="trailing" id="YNu-3f-oiU"/>
+                            <constraint firstItem="FHW-BS-ses" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cQV-U8-uUT"/>
+                            <constraint firstAttribute="bottom" secondItem="FHW-BS-ses" secondAttribute="bottom" id="i5f-pu-yM0"/>
+                            <constraint firstItem="Zd4-ho-BR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ie2-8n-EsF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FHW-BS-ses" secondAttribute="trailing" id="leC-aw-16j"/>
+                            <constraint firstItem="Zd4-ho-BR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rP9-zK-1fx"/>
+                            <constraint firstItem="FHW-BS-ses" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rn6-AB-bds"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pIJ-Qi-ZSy">
+                        <nil key="title"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="3.5545023696682461"/>
+        </scene>
+        <!--Core Controller-->
+        <scene sceneID="Gig-8c-GDm">
+            <objects>
+                <viewController storyboardIdentifier="CoreController" id="EeT-dO-0Bd" customClass="CoreController" customModule="Calcifer_chasing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="CoreController" id="XFA-z4-hZK" customClass="CoreController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0hZ-Gw-JLL"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YLI-Mh-0kf"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYr-EW-2a3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796.92307692307691" y="9.9526066350710902"/>
+        </scene>
+        <!--Titles Controller-->
+        <scene sceneID="8cl-rU-5C5">
+            <objects>
+                <viewController storyboardIdentifier="TitlesController" id="bp1-WW-THi" customClass="TitlesController" customModule="Calcifer_chasing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nbk-oo-nKr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBo-y4-JnF" customClass="GradientView" customModule="Calcifer_chasing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inspired by the artwork of Hayao Miyazaki" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnb-o2-oit">
+                                        <rect key="frame" x="0.0" y="460" width="414" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="FWU-yS-YjP"/>
+                                            <constraint firstAttribute="width" constant="414" id="k1U-0n-lQs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Volja-Regular" family="Volja" pointSize="27"/>
+                                        <color key="textColor" red="0.59361368420000005" green="0.54216104750000005" blue="0.46662646530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titles:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXG-8d-IeH">
+                                        <rect key="frame" x="0.0" y="100" width="414" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="9R6-VB-PKp"/>
+                                            <constraint firstAttribute="width" constant="414" id="FP3-jk-Qw7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Volja-Regular" family="Volja" pointSize="30"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" -2" translatesAutoresizingMaskIntoConstraints="NO" id="UC3-ub-q3W" customClass="BackGroundImageView" customModule="Calcifer_chasing" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="200" width="414" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="3eF-ck-PH4"/>
+                                            <constraint firstAttribute="height" constant="230" id="M3o-hd-VMn"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pXG-8d-IeH" firstAttribute="leading" secondItem="jBo-y4-JnF" secondAttribute="leading" id="3Y9-fQ-FFU"/>
+                                    <constraint firstItem="pXG-8d-IeH" firstAttribute="top" secondItem="jBo-y4-JnF" secondAttribute="top" constant="100" id="D8G-kC-Ygh"/>
+                                    <constraint firstItem="UC3-ub-q3W" firstAttribute="top" secondItem="pXG-8d-IeH" secondAttribute="bottom" constant="70" id="L5v-U6-Xni"/>
+                                    <constraint firstAttribute="bottom" secondItem="UC3-ub-q3W" secondAttribute="bottom" constant="466" id="PGP-NT-z4p"/>
+                                    <constraint firstItem="vnb-o2-oit" firstAttribute="leading" secondItem="jBo-y4-JnF" secondAttribute="leading" id="RqX-aE-X4v"/>
+                                    <constraint firstAttribute="trailing" secondItem="pXG-8d-IeH" secondAttribute="trailing" id="YcC-qG-NuE"/>
+                                    <constraint firstAttribute="bottom" secondItem="vnb-o2-oit" secondAttribute="bottom" constant="136" id="bk6-Ay-40K"/>
+                                    <constraint firstAttribute="trailing" secondItem="UC3-ub-q3W" secondAttribute="trailing" id="bl4-en-Oe8"/>
+                                    <constraint firstItem="vnb-o2-oit" firstAttribute="top" secondItem="jBo-y4-JnF" secondAttribute="top" constant="460" id="cz8-Lg-5a7"/>
+                                    <constraint firstAttribute="trailing" secondItem="vnb-o2-oit" secondAttribute="trailing" id="dol-Na-Jvy"/>
+                                    <constraint firstAttribute="bottom" secondItem="pXG-8d-IeH" secondAttribute="bottom" constant="766" id="eVS-AB-evc"/>
+                                    <constraint firstItem="UC3-ub-q3W" firstAttribute="leading" secondItem="jBo-y4-JnF" secondAttribute="leading" id="hRu-nL-8fD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.18002487744891585" green="0.13467083856494472" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KTb-jL-3a7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jBo-y4-JnF" firstAttribute="leading" secondItem="KTb-jL-3a7" secondAttribute="leading" id="Hao-Ix-qc3"/>
+                            <constraint firstAttribute="bottom" secondItem="jBo-y4-JnF" secondAttribute="bottom" id="Mq1-L9-7rU"/>
+                            <constraint firstItem="jBo-y4-JnF" firstAttribute="trailing" secondItem="KTb-jL-3a7" secondAttribute="trailing" id="RTv-1v-FCI"/>
+                            <constraint firstItem="jBo-y4-JnF" firstAttribute="top" secondItem="Nbk-oo-nKr" secondAttribute="top" id="tOJ-EL-Tri"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="withinDoorsImage" destination="UC3-ub-q3W" id="wGi-eq-gD6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9HG-54-tTS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143.4782608695655" y="8.7053571428571423"/>
+        </scene>
+        <!--Score Controller-->
+        <scene sceneID="8eV-Ca-hRU">
+            <objects>
+                <viewController storyboardIdentifier="ScoreController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k0Y-4l-MaB" customClass="ScoreController" customModule="Calcifer_chasing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O5v-Ux-l4o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYe-eH-Gv1" customClass="GradientView" customModule="Calcifer_chasing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score history:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSK-dP-Eho">
+                                        <rect key="frame" x="0.0" y="100" width="414" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="mNt-XW-QBR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Volja-Regular" family="Volja" pointSize="30"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" -3" translatesAutoresizingMaskIntoConstraints="NO" id="mzz-nz-jw7" customClass="ShadowImageView" customModule="Calcifer_chasing" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="600" width="414" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="Tyi-6P-m9h"/>
+                                            <constraint firstAttribute="height" constant="230" id="dtP-vy-C9N"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pSK-dP-Eho" secondAttribute="trailing" id="1qr-Pf-qhD"/>
+                                    <constraint firstItem="mzz-nz-jw7" firstAttribute="top" secondItem="pSK-dP-Eho" secondAttribute="bottom" constant="470" id="4gO-qp-FqE"/>
+                                    <constraint firstAttribute="bottom" secondItem="mzz-nz-jw7" secondAttribute="bottom" constant="66" id="H1h-5k-G5D"/>
+                                    <constraint firstItem="mzz-nz-jw7" firstAttribute="leading" secondItem="FYe-eH-Gv1" secondAttribute="leading" id="Jso-ty-BmX"/>
+                                    <constraint firstAttribute="trailing" secondItem="mzz-nz-jw7" secondAttribute="trailing" id="Lxw-3S-9GE"/>
+                                    <constraint firstAttribute="bottom" secondItem="pSK-dP-Eho" secondAttribute="bottom" constant="766" id="g99-Iy-h1N"/>
+                                    <constraint firstItem="pSK-dP-Eho" firstAttribute="top" secondItem="FYe-eH-Gv1" secondAttribute="top" constant="100" id="jhi-Ds-maW"/>
+                                    <constraint firstItem="pSK-dP-Eho" firstAttribute="leading" secondItem="FYe-eH-Gv1" secondAttribute="leading" id="mWb-i4-yW2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.14117647058823529" green="0.1537611485" blue="0.09947312623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L8c-9v-RGy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FYe-eH-Gv1" firstAttribute="top" secondItem="O5v-Ux-l4o" secondAttribute="top" id="1dR-pF-gYN"/>
+                            <constraint firstAttribute="bottom" secondItem="FYe-eH-Gv1" secondAttribute="bottom" id="Mqo-Ol-HuC"/>
+                            <constraint firstItem="FYe-eH-Gv1" firstAttribute="leading" secondItem="L8c-9v-RGy" secondAttribute="leading" id="Sna-xo-9BJ"/>
+                            <constraint firstItem="FYe-eH-Gv1" firstAttribute="trailing" secondItem="L8c-9v-RGy" secondAttribute="trailing" id="zI1-fn-Ipu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11Y-9T-rUz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1469.5652173913045" y="8.7053571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name=" -2" width="1600" height="875"/>
+        <image name=" -3" width="1200" height="785"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
